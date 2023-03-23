@@ -70,7 +70,7 @@ Arrays.stream(numbers)
 
 ###학습한것 
 
-##view
+##view<br>
 #객체
 ```
     Button
