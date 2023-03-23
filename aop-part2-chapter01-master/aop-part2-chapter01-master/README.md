@@ -72,10 +72,13 @@ Arrays.stream(numbers)
 
 ##view
 #객체
+```
     Button
     EditText
     TextView
+   ```
 #속성
+```
     android:padding="16dp"
     android:layout_marginTop="10dp"'
     android:text="@string/height"
@@ -84,7 +87,7 @@ Arrays.stream(numbers)
     android:textSize="20sp"
     android:textStyle="bold"
     android:ems="10"
-
+```
 
 ##controller
 # id값으로불러온다
