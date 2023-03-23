@@ -70,12 +70,15 @@ Arrays.stream(numbers)
 
 ###학습한것 
 
-##view
+##view<br>
 #객체
+```
     Button
     EditText
     TextView
+   ```
 #속성
+```
     android:padding="16dp"
     android:layout_marginTop="10dp"'
     android:text="@string/height"
@@ -84,7 +87,7 @@ Arrays.stream(numbers)
     android:textSize="20sp"
     android:textStyle="bold"
     android:ems="10"
-
+```
 
 ##controller
 # id값으로불러온다
@@ -93,11 +96,11 @@ Arrays.stream(numbers)
 
         val resultButton = findViewById<Button>(R.id.resultButton)
 #팅기게한다        
-return@setOnClickListener
+      `  return@setOnClickListener`
 
 #통신방법
-val height: Int = heightEditText.text.toString().toInt()
-val weight: Int = weightEditText.text.toString().toInt()
+            val height: Int = heightEditText.text.toString().toInt()
+            val weight: Int = weightEditText.text.toString().toInt()
 
             val intent = Intent(this, ResultActivity::class.java)
 
@@ -116,6 +119,6 @@ val weight: Int = weightEditText.text.toString().toInt()
 
 ##setting
 
-#manifests
-  <activity android:name=".ResultActivity"/>
+#manifests<>
+        `<activity android:name=".ResultActivity"/>`
 
