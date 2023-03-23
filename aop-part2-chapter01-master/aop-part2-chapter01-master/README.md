@@ -117,5 +117,5 @@ Arrays.stream(numbers)
 ##setting
 
 #manifests
-        <activity android:name=".ResultActivity"/>
+        `<activity android:name=".ResultActivity"/>`
 
