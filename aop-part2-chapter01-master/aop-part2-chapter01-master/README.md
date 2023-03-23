@@ -93,11 +93,11 @@ Arrays.stream(numbers)
 
         val resultButton = findViewById<Button>(R.id.resultButton)
 #팅기게한다        
-return@setOnClickListener
+        return@setOnClickListener
 
 #통신방법
-val height: Int = heightEditText.text.toString().toInt()
-val weight: Int = weightEditText.text.toString().toInt()
+            val height: Int = heightEditText.text.toString().toInt()
+            val weight: Int = weightEditText.text.toString().toInt()
 
             val intent = Intent(this, ResultActivity::class.java)
 
@@ -117,5 +117,5 @@ val weight: Int = weightEditText.text.toString().toInt()
 ##setting
 
 #manifests
-  <activity android:name=".ResultActivity"/>
+        <activity android:name=".ResultActivity"/>
 
