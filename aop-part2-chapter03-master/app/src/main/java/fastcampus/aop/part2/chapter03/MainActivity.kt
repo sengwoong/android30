@@ -66,14 +66,19 @@ class MainActivity : AppCompatActivity() {
         openButton.setOnClickListener {
             if (changePasswordMode) {
                 Toast.makeText(this, "비밀번호 변경 모드입니다.", Toast.LENGTH_SHORT).show()
+                //경고창
                 return@setOnClickListener
             }
 
             val sharedPreferences = getSharedPreferences("password", Context.MODE_PRIVATE)
+            //내부디비쓰기password가져오기 이미 생성돼어있을시엔 그대로들고옴
             val password = "${firstNumberPicker.value}${secondNumberPicker.value}${thirdNumberPicker.value}"
 
             if (password == sharedPreferences.getString("password", "000")) {
-                startActivity(Intent(this, DiaryActivity::class.java))
+                //패스워드가 쉐어랑같냐?
+                startActivity(Intent(this, DiaryActivity::class.java)
+                //보내기Intent
+                )
             } else {
                 showErrorPopup()
             }
@@ -86,7 +91,7 @@ class MainActivity : AppCompatActivity() {
 
             if (changePasswordMode) {
 
-
+//한바퀴돌고들어와야함
                 sharedPreferences.edit {
                     this.putString("password", "${firstNumberPicker.value}${secondNumberPicker.value}${thirdNumberPicker.value}")
                     commit()
@@ -94,6 +99,7 @@ class MainActivity : AppCompatActivity() {
                 changePasswordMode = false
                 changePasswordButton.setBackgroundColor(Color.BLACK)
             } else {
+                //처음에 여기로들어감
                 val password = "${firstNumberPicker.value}${secondNumberPicker.value}${thirdNumberPicker.value}"
 
                 if (password != sharedPreferences.getString("password", "000")) {

@@ -28,7 +28,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.45">
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        >
 
         <NumberPicker
             android:id="@+id/firstNumberPicker"
@@ -40,7 +42,7 @@
             app:layout_constraintStart_toEndOf="@id/openButton"
             app:layout_constraintEnd_toStartOf="@id/secondNumberPicker"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_chainStyle="packed" />
+          />
 
         <NumberPicker
             android:id="@+id/secondNumberPicker"

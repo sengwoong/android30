@@ -27,18 +27,20 @@ class DiaryActivity : AppCompatActivity() {
 
     private fun initDetailEditText() {
         val detail = getSharedPreferences("diary", Context.MODE_PRIVATE).getString("detail", "")
+        //다이어리안에있는 디테일로 만들기
         diaryEditText.setText(detail)
 
         val runnable = Runnable {
             getSharedPreferences("diary", Context.MODE_PRIVATE).edit(true) {
+                //값저장모드
                 putString("detail", diaryEditText.text.toString())
             }
         }
 
         diaryEditText.addTextChangedListener {
-            Log.d("DiaryActivity", "text Changed :: $it")
-            handler.removeCallbacks(runnable)
-            handler.postDelayed(runnable, 500)
+            Log.d("DiaryActivity", "text Changed :: $it")//자기의text부름
+            handler.removeCallbacks(runnable)//최근저장한거지우고
+            handler.postDelayed(runnable, 500)//최근저장한걸 다시넣기
         }
     }
 }
