@@ -1,67 +1,58 @@
-import 'dart:convert';
+// list_page.dart
+
+
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:http1/post_dto.dart';
-import 'package:http/http.dart'as http;
+
 import 'package:http1/post_repository.dart';
+
+import 'package:http1/post_dto.dart';
+
 class ListPage extends HookWidget {
   const ListPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
-    //더미데이터
-    //PostDtoTable postDtoTable = PostDtoTable(userId: 0, id: 0, title: "제목");
-//실제 데이터
     final listState = useState<List<PostDtoTable>?>(null);
-    // final jsonState =useState<String?>(null);
-
-    useEffect((){
-   PostRepository.instance.getDTOList().then((value){listState.value =value;});
-
-        }else{
-          print("값없음");
-        }
+    useEffect(() {
+      PostRepository.instance.getDTOList().then((value){
+        listState.value = value;
       });
-    } ,[]);
-
+    }, []);
 
     return Scaffold(
       body: SafeArea(
-        child:ListView(
-          children: listState.value?.map((e) => ListItem(postDtoTable: e)).toList() ?? [],
-
-
-          //ListItem(postDtoTable: postDtoTable),
-
-
+        child: ListView(
+          children: listState.value?.map((e) => ListItem(postDTOTable: e)).toList() ?? [],
         ),
-
       ),
     );
   }
-
+}
 
 class ListItem extends StatelessWidget {
+  PostDtoTable postDTOTable;
 
-  ListItem({Key? key, required this.postDtoTable}) : super(key: key);
-  PostDtoTable postDtoTable;
+  ListItem({Key? key, required this.postDTOTable}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(10),
-      decoration: BoxDecoration(border: Border.all(width: 2 , color: Colors.black)),
+      decoration: BoxDecoration(
+        border: Border.all(width: 2, color: Colors.black),
+      ),
       child: Column(
         children: [
-          Text("유저번호는 ${postDtoTable.userId}"),
+          Text("유저번호 : ${postDTOTable.userId}"),
           Divider(),
-          Text("글번호:${postDtoTable.id}"),
+          Text("글 번호 : ${postDTOTable.id}"),
           Divider(),
-          Text("글번호:${postDtoTable.title}")
+          Text("글 제목 : ${postDTOTable.title}"),
         ],
       ),
-    )
-    ;
+    );
   }
 }

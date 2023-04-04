@@ -1,19 +1,16 @@
 import 'dart:convert';
-
-import 'package:http/http.dart'as http;
+import 'package:http/http.dart' as http;
 import 'package:http1/post_dto.dart';
-//메소드(method)는 객체(object)에 속한 함수(function)로, 클래스(class) 내부에서 정의됩니다. 인스턴스(instance)는 클래스를 통해 만들어진 객체를 의미합니다.
 class PostRepository{
-  //싱글톤
+  // 싱글톤 - 해당 타입의 객체가 프로그램에서 단 1개
+  // 스태틱 변수 선언
   static PostRepository? _instance;
-  //퍼블릭 생성자 제거
-  //dart에서 private은 맨 앞에 언더바를 붙인다.
+  // 퍼블릭 생성자 제거
+  // dart에서 private은 맨 앞에 언더바를 붙인다
   PostRepository._();
-
-  //?? -> 대체값  // ??= -> 대입값
+  // 싱글톤 객체 getter
   static PostRepository get instance => _instance ??= PostRepository._();
-//통신실패가능성
-
+  // 통신은 실패할 수 있다 == nullable
   Future<List<PostDtoTable>?> getDTOList() async {
     String url = "https://jsonplaceholder.typicode.com/posts";
     http.Response response = await http.get(Uri.parse(url));
@@ -23,19 +20,6 @@ class PostRepository{
       return null;
     }
   }
-
-
-  }
-
-
-
-}
-
 }
 
 
-// void main(){
-//   PostRepository.instance;
-//   PostRepository.instance;
-//   PostRepository.instance;
-// }

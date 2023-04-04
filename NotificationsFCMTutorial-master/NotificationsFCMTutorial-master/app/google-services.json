@@ -1,0 +1,121 @@
+{
+  "project_info": {
+    "project_number": "694107305703",
+    "project_id": "sibal-be80b",
+    "storage_bucket": "sibal-be80b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:694107305703:android:908258a72eaa5bd53e1442",
+        "android_client_info": {
+          "package_name": "com.sibal.jinjjasibal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "694107305703-k2pnghi8v8mv25oaqlkpva41qbdlrjqf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sibal.jinjjasibal",
+            "certificate_hash": "2023f36e279531951c8c691e5a1673aebde1266b"
+          }
+        },
+        {
+          "client_id": "694107305703-ls7acksjk3929pmuo336jsdishftaf7t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhymEQCrUd4apVSJUQkjUPEwMqdPwsHPI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "694107305703-ls7acksjk3929pmuo336jsdishftaf7t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:694107305703:android:0058e0f8f5d06bbc3e1442",
+        "android_client_info": {
+          "package_name": "com.sibal.jodgodda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "694107305703-lfnk0bb3u0ubq88s92qkj0iedjm0nfqs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sibal.jodgodda",
+            "certificate_hash": "2023f36e279531951c8c691e5a1673aebde1266b"
+          }
+        },
+        {
+          "client_id": "694107305703-ls7acksjk3929pmuo336jsdishftaf7t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhymEQCrUd4apVSJUQkjUPEwMqdPwsHPI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "694107305703-ls7acksjk3929pmuo336jsdishftaf7t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:694107305703:android:17b9ca2b15cec3c83e1442",
+        "android_client_info": {
+          "package_name": "com.sibal.pushnotificationtutorial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "694107305703-d70u8ufune03jbfd43n7cb06pqnu10be.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sibal.pushnotificationtutorial",
+            "certificate_hash": "2023f36e279531951c8c691e5a1673aebde1266b"
+          }
+        },
+        {
+          "client_id": "694107305703-ls7acksjk3929pmuo336jsdishftaf7t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhymEQCrUd4apVSJUQkjUPEwMqdPwsHPI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "694107305703-ls7acksjk3929pmuo336jsdishftaf7t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

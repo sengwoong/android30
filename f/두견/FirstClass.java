@@ -28,5 +28,9 @@ class FirstClass{
 
 interface MyInterface{
     void myFunction();
+//asdasd
+
+
+//일급객체만들기
 
 }
